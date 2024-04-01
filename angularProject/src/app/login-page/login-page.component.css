@@ -1,0 +1,19 @@
+body {
+    color: var(--box);
+
+}
+.login {
+    padding: 140px 100px;
+}
+
+.formulaire {
+    background-color:var(--box);
+    padding: 20px 30px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-width: 0px;
+    border-radius: 0;
+    background-color: var(--primary);
+}
