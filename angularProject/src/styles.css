@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+:root {
+    --primary: rgba(37, 43,103);
+    --dark: #757575;
+    --body: #252525;
+    --white: #ffffff;
+    --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a:hover, li:hover {
+    color: var(--dark);
+}
+
+body {
+    font-family: "Sora", sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+}
+
+.btn {
+    padding: 14px 18px;
+    border-width: 0px;
+    border-radius: 0;
+}
