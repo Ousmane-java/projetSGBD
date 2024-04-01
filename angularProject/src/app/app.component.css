@@ -1,0 +1,47 @@
+
+
+h1.display-4 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.logo {
+    width: 160px;
+}
+
+.navbar-light .navbar-nav .nav-link
+{
+    color: #000000;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: var(--dark);
+}
+
+.navbar .nav-link {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.navbar .nav-link.active {
+    color: var(--primary) !important;
+}
+
+.connexion {
+    background-color: var(--primary);
+}
+
