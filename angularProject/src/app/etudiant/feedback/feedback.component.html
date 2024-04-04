@@ -1,0 +1,408 @@
+<section class=" mt-5 pt-md-4">
+    <div class="container">
+        <form method="post" id="myform">
+
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <h2 class="col-md-8 mb-5 mx-auto text-center">Feed-Back Etudiant</h2>
+                    <div class="fs-6 fw-light">Cette évaluation est anonyme. Elle a pour unique objectif l’amélioration
+                        de la qualité de l’enseignement au Département Génie Informatique de l’École Supérieure
+                        Polytechnique de Dakar (ESP).</div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <select class="form-select">
+                    <option selected>Choisir le cours</option>
+                    <option value="disponible">Disponible</option>
+                    <option value="pas_disponible">Pas disponible</option>
+                    <option value="utilise">Utilisé</option>
+                    <option value="pas_utilise">Pas utilisé</option>
+                </select>
+            </div>
+            <!-- SYLLABUS -->
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <label class="form-label">Le syllabus est-il fourni ?</label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        OUI
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        NON
+                    </label>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Les objectifs du cours sont-ils clairement énoncés dans le syllabus
+                        ?</label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        OUI
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        NON
+                    </label>
+                </div>
+            </div>
+
+            <!-- DEROULEMENT -->
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Le contenu du cours est-il conforme aux objectifs énoncés dans le syllabus
+                        ?</label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        Conforme
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        Pas conforme
+                    </label>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Le support de cours est-il fourni ?</label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        OUI
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        NON
+                    </label>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label"> Le contenu du cours mentionné dans le syllabus a –t-il été respecté
+                        ?</label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        OUI
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        NON
+                    </label>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Le volume horaire a-t-il été respecté ?</label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        OUI
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        NON
+                    </label>
+                </div>
+            </div>
+
+            <!-- DEROULEMENT DE L'ENSEIGNEMENT-->
+
+
+            <div class="row">
+                <div class="col">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Materiel</th>
+                                <th scope="col">Selectionner</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Vidéo Projecteur</th>
+                                <td>
+                                    <select class="form-select">
+                                        <option selected></option>
+                                        <option value="disponible">Disponible</option>
+                                        <option value="pas_disponible">Pas disponible</option>
+                                        <option value="utilise">Utilisé</option>
+                                        <option value="pas_utilise">Pas utilisé</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tableau Noir</th>
+                                <td>
+                                    <select class="form-select">
+                                        <option selected></option>
+                                        <option value="disponible">Disponible</option>
+                                        <option value="pas_disponible">Pas disponible</option>
+                                        <option value="utilise">Utilisé</option>
+                                        <option value="pas_utilise">Pas utilisé</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tableau Blanc</th>
+                                <td>
+                                    <select class="form-select">
+                                        <option selected></option>
+                                        <option value="disponible">Disponible</option>
+                                        <option value="pas_disponible">Pas disponible</option>
+                                        <option value="utilise">Utilisé</option>
+                                        <option value="pas_utilise">Pas utilisé</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ordinateur</th>
+                                <td>
+                                    <select class="form-select">
+                                        <option selected></option>
+                                        <option value="disponible">Disponible</option>
+                                        <option value="pas_disponible">Pas disponible</option>
+                                        <option value="utilise">Utilisé</option>
+                                        <option value="pas_utilise">Pas utilisé</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Marqueur</th>
+                                <td>
+                                    <select class="form-select">
+                                        <option selected></option>
+                                        <option value="disponible">Disponible</option>
+                                        <option value="pas_disponible">Pas disponible</option>
+                                        <option value="utilise">Utilisé</option>
+                                        <option value="pas_utilise">Pas utilisé</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Craie</th>
+                                <td>
+                                    <select class="form-select">
+                                        <option selected></option>
+                                        <option value="disponible">Disponible</option>
+                                        <option value="pas_disponible">Pas disponible</option>
+                                        <option value="utilise">Utilisé</option>
+                                        <option value="pas_utilise">Pas utilisé</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Effaceur</th>
+                                <td>
+                                    <select class="form-select">
+                                        <option selected></option>
+                                        <option value="disponible">Disponible</option>
+                                        <option value="pas_disponible">Pas disponible</option>
+                                        <option value="utilise">Utilisé</option>
+                                        <option value="pas_utilise">Pas utilisé</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Cahier de texte</th>
+                                <td>
+                                    <select class="form-select">
+                                        <option selected></option>
+                                        <option value="disponible">Disponible</option>
+                                        <option value="pas_disponible">Pas disponible</option>
+                                        <option value="utilise">Utilisé</option>
+                                        <option value="pas_utilise">Pas utilisé</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Matériels didactiques spécialisés</th>
+                                <td>
+                                    <select class="form-select">
+                                        <option selected></option>
+                                        <option value="disponible">Disponible</option>
+                                        <option value="pas_disponible">Pas disponible</option>
+                                        <option value="utilise">Utilisé</option>
+                                        <option value="pas_utilise">Pas utilisé</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <!-- SUPPORT -->
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Les supports numériques (multimédia, audiovisuel,...) sont –ils utilisés
+                        dans les enseignements </label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        OUI
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        NON
+                    </label>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Les références bibliographiques sont –elles accessibles ?</label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        OUI
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        NON
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label class="form-label">Si vous suivez des cours magistraux et des TD, le contenu des TD vous
+                        a-t-il paru cohérent avec le cours ?</label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        OUI
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        Pas tout à fait
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        NON
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label class="form-label">Si vous suivez des cours magistraux et des TP/Stages, le contenu des
+                        TP/Stages vous a-t-il paru cohérent avec le cours ?</label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        OUI
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        Pas tout à fait
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        NON
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label class="form-label">Est-il prévu des heures de réception pour les étudiants ?</label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        OUI
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        NON
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label class="form-label">Comment appréciez-vous l’exposé du cours magistral :</label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        Pas clair
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        Moyennement clair
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        Clair
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        Non
+                    </label>
+                </div>
+
+            </div>
+
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label class="form-label">Avez-vous des possibilités de poser des questions lors du cours magistral,
+                        des TP et/ou TD ?</label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        OUI
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        NON
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label class="form-label">Les modalités de contrôle des connaissances sont-elles annoncées dans le
+                        syllabus ?</label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        OUI
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        NON
+                    </label>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label class="form-label">Comment trouver-vous les méthodes d’évaluation ?</label><br>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        Adaptées
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        Peu adaptées
+                    </label>
+                    <input class="form-check-input ms-4" type="radio" name="flexRadioDefault">
+                    <label class="form-check-label ms-3">
+                        Inadaptées
+                    </label>
+                </div>
+
+            </div>
+
+
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label for="suggestions" class="form-label">Quelles autres suggestions pouvez-vous faire pour
+                        l’amélioration des enseignements ?</label>
+                    <textarea name="suggestions" class="form-control" id="suggestions" rows="6"></textarea>
+                </div>
+            </div>
+
+
+            <div class="row mb-3">
+                <div class="col-md-6 d-flex align-items-center">
+                    <button class="btn btn-lg px-4"
+                        style="background-color:var(--primary);border-color:#007bff;color:white;"
+                        type="submit">Valider</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</section>
