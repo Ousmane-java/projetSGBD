@@ -20,6 +20,9 @@ Ensuite, exécutez la commande suivante :
 
 Naviguez enfin entre les pages du site.
 
+<<<<<<< HEAD
 ## Visuels
 
 ## Utilisation
+=======
+>>>>>>> 4cc32966c8406b11cc78c0296d9307452bbe629f
