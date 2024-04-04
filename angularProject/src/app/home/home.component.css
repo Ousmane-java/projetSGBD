@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 .homecontent
@@ -11,6 +12,18 @@
 }
 
 .homecontent::after {
+=======
+.hero {
+    background-image: url(/assets/images/banner-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+
+.hero::after {
+>>>>>>> 7c2032c0943b6eaa8ff8502e522076eba818042d
     content: "";
     width: 100%;
     height: 100%;
@@ -21,6 +34,7 @@
     z-index: -1;
 }
 
+<<<<<<< HEAD
 
 .homecontent h1
 {
@@ -56,3 +70,15 @@
     font-size: 40px;        
 }
 }
+=======
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.connexion {
+    border-width: 2px;
+
+}
+
+>>>>>>> 7c2032c0943b6eaa8ff8502e522076eba818042d

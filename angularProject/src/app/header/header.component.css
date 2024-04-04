@@ -1,0 +1,26 @@
+
+
+
+/* .navbar-light .navbar-nav .nav-link
+{
+    color: #000000;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: var(--dark);
+}
+
+.navbar .nav-link {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.navbar .nav-link.active {
+    color: var(--primary) !important;
+} */
+
+.connexion {
+    background-color: var(--primary);
+}
+
