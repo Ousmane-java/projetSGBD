@@ -1,0 +1,121 @@
+<section class=" mt-5 pt-md-4">
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <h2 class="col-md-8 mb-5 mx-auto text-center">Cahier de texte numérique</h2>
+        <div class="d-grid gap-2 d-md-flex  justify-content-md-end">
+          <button class="btn btn-dark me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            data-bs-whatever="">Enregistrer un nouveau cours</button>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Nouveau cours</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label class="col-form-label">Date</label>
+                      <input type="date" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
+                      <label class="col-form-label">Heure</label>
+                      <input type="time" class="form-control" id="recipient-name">
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="col-form-label">Professeur</label>
+                      <select name="" id="" class="form-control">
+                        <option value=""></option>
+                      </select>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="col-form-label">Cours</label>
+                      <select name="" id="" class="form-control">
+                        <option value=""></option>
+                      </select>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="col-form-label">Contenu</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-dark">Enregistrer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Heure</th>
+          <th scope="col">Professeur</th>
+          <th scope="col">Cours</th>
+          <th scope="col">Contenu</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">20-10-2010</th>
+          <td>10:00</td>
+          <td>Saliou SENE</td>
+          <td>Anglais</td>
+          <td>Contenu</td>
+          <td>Actions</td>
+        </tr>
+        <tr>
+          <th scope="row">20-10-2010</th>
+          <td>10:00</td>
+          <td>Saliou SENE</td>
+          <td>Anglais</td>
+          <td>Contenu</td>
+          <td>Actions</td>
+        </tr>
+        <tr>
+          <th scope="row">20-10-2010</th>
+          <td>10:00</td>
+          <td>Saliou SENE</td>
+          <td>Anglais</td>
+          <td>Contenu</td>
+          <td>Actions</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</section>
+
+<script>
+  const exampleModal = document.getElementById('exampleModal')
+  if (exampleModal) {
+    exampleModal.addEventListener('show.bs.modal', event => {
+      // Button that triggered the modal
+      const button = event.relatedTarget
+      // Extract info from data-bs-* attributes
+      const recipient = button.getAttribute('data-bs-whatever')
+      // If necessary, you could initiate an Ajax request here
+      // and then do the updating in a callback.
+
+      // Update the modal's content.
+      const modalTitle = exampleModal.querySelector('.modal-title')
+      const modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+      modalTitle.textContent = `New message to ${recipient}`
+      modalBodyInput.value = recipient
+    })
+  }
+</script>

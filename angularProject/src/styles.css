@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap'); */
 
 :root {
     --primary: rgba(37, 43,103);
@@ -19,7 +19,7 @@ a:hover, li:hover {
 }
 
 body {
-    font-family: "Sora", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.7;
     color: var(--body);
 }
@@ -28,4 +28,36 @@ body {
     padding: 14px 18px;
     border-width: 0px;
     border-radius: 0;
+}
+
+h1.display-4 {
+    color: var(--dark);
+    font-weight: 700;
+}
+h2, h3, h4, h5, h6{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    color:var(--body);
+    margin-bottom: 20px;
+  }
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.logo {
+    width: 160px;
 }
