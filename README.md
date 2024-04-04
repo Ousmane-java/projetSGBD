@@ -20,4 +20,3 @@ Ensuite, exécutez la commande suivante :
 
 Naviguez enfin entre les pages du site.
 
-## Utilisation
