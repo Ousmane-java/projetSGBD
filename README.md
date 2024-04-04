@@ -22,9 +22,10 @@ Naviguez enfin entre les pages du site.
 
 ## Utilisation
 
-                                 --------------------
-# La structure du backOffice 'pyqtProject'
 
+## La structure du backOffice 'pyqtProject'
+
+```
 pyqtProject/
 │
 ├── ui/                  # Dossier pour les fichiers de conception d'interface utilisateur (fichiers .ui)
@@ -51,4 +52,5 @@ pyqtProject/
 └── README.md            # Documentation du projet
 
 
+```
 

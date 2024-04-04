@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('my_pyqt_view/', views.my_pyqt_view, name='my_pyqt_view'),
+    # Autres URLs de votre application
 ]
