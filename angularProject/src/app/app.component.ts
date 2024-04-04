@@ -1,6 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+<<<<<<< HEAD
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+=======
+import { CommonModule } from '@angular/common';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+
+>>>>>>> main
 
 @Component({
   selector: 'app-root',
@@ -10,5 +16,5 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angularProject';
+  title = 'Effectivité Enseignement';
 }

@@ -1,17 +1,25 @@
 import { Component } from '@angular/core';
+<<<<<<< HEAD
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
+=======
+>>>>>>> main
 
 @Component({
   selector: 'app-login-page',
   standalone: true,
+<<<<<<< HEAD
   imports: [FormsModule],
+=======
+  imports: [],
+>>>>>>> main
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.css'
 })
 export class LoginPageComponent {
 
+<<<<<<< HEAD
   loginObj:any = {
     email: '',
     password: ''
@@ -27,4 +35,6 @@ export class LoginPageComponent {
       alert("Incorrect")
     }
   }
+=======
+>>>>>>> main
 }

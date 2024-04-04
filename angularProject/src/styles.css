@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+<<<<<<< HEAD
 /* @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap'); */
 
 :root {
@@ -60,4 +61,31 @@ img {
 
 .logo {
     width: 160px;
+=======
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+:root {
+    --primary: rgb(37, 43, 103);
+    --body: rgb(20, 19, 19);
+    --dark: rgb(1, 0, 0);
+    --box: rgb(248, 249, 250);
+    --box-shadow:rgb(195, 218, 241);
+
+}
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Sora", sans-serif;
+    box-sizing: border-box;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: var(--body);
+    font-size: 20px;
+>>>>>>> main
 }
