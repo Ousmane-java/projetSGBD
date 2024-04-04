@@ -1,134 +1,142 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'mylogin.ui'
-#
-# Created by: PyQt5 UI code generator 5.12
-#
-# WARNING! All changes made in this file will be lost!
-
-from PyQt5 import QtCore, QtGui, QtWidgets
-from newuser import  *
-from PyQt5 import QtWidgets
-import sqlite3
+import sys
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout, QGridLayout, QMessageBox
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtCore import Qt
+import mysql.connector
+from inscription import InscriptionPage
+from espaceAdmin import EspaceAdminPage
 
 
-class Ui_Form(object):
+class AdminLoginPage(QWidget):
+    def __init__(self):
+        super().__init__()
 
-    def openwindow(self):
+        self.setWindowTitle("Page de Connexion Administrateur")
+        self.setGeometry(0, 0, 400, 200)  # Taille arbitraire
+        self.center()
 
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Newuser()
-        self.ui.setupUi(self.window)
-        self.window.show()
-        Form.hide()
+        self.init_ui()
 
+    def center(self):
+        # Centrer la fenêtre sur l'écran
+        screen_geometry = QApplication.desktop().screenGeometry()
+        x = int((screen_geometry.width() - self.width()) / 2)
+        y = int((screen_geometry.height() - self.height()) / 2)
+        self.move(x, y)
 
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(614, 436)
-        self.textBrowser = QtWidgets.QTextBrowser(Form)
-        self.textBrowser.setGeometry(QtCore.QRect(150, 10, 361, 61))
-        self.textBrowser.setObjectName("textBrowser")
-        self.gridLayoutWidget = QtWidgets.QWidget(Form)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(100, 90, 431, 261))
-        self.gridLayoutWidget.setObjectName("gridLayoutWidget")
-        self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout.setObjectName("gridLayout")
-        self.l_username = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.l_username.setObjectName("l_username")
-        self.gridLayout.addWidget(self.l_username, 0, 0, 1, 1)
-        self.l_password = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.l_password.setObjectName("l_password")
-        self.gridLayout.addWidget(self.l_password, 1, 0, 1, 1)
-        self.txt_password = QtWidgets.QLineEdit(self.gridLayoutWidget)
-        self.txt_password.setObjectName("txt_password")
-        self.gridLayout.addWidget(self.txt_password, 1, 1, 1, 1)
-        self.txt_username = QtWidgets.QLineEdit(self.gridLayoutWidget)
-        self.txt_username.setObjectName("txt_username")
-        self.gridLayout.addWidget(self.txt_username, 0, 1, 1, 1)
-        self.btn_submit = QtWidgets.QPushButton(self.gridLayoutWidget)
-        self.btn_submit.setStyleSheet("background-color: rgb(27, 27, 27);\n"
-                                      "color: \'white\';")
-        self.btn_submit.setObjectName("btn_submit")
-        self.gridLayout.addWidget(self.btn_submit, 2, 1, 1, 1)
-        self.btn_newuser = QtWidgets.QPushButton(self.gridLayoutWidget)
-        self.btn_newuser.setStyleSheet("background-color: rgb(27, 27, 27);\n"
-                                       "color: \'white\';")
-        self.btn_newuser.setObjectName("btn_newuser")
-        self.gridLayout.addWidget(self.btn_newuser, 3, 1, 1, 1)
+    def init_ui(self):
+        layout = QVBoxLayout()
+        grid_layout = QGridLayout()
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        # Image
+        image_label = QLabel()
+        # Mettez ici le chemin de votre image
+        image_label.setPixmap(QPixmap("C:\\Users\\HP ELITEBOOK G5\\Desktop\\projetSGBD\\pyqtProject\\src\\téléchargement.png"))  
 
-        self.btn_newuser.clicked.connect(self.btn_newuser_handler)
-        self.btn_submit.clicked.connect(self.btn_login_handler)
+        image_label.setAlignment(Qt.AlignCenter)
+        grid_layout.addWidget(image_label, 0, 0, 1, 2)
 
+        # Email
+        email_label = QLabel("Email:")
+        self.email_input = QLineEdit()
+        grid_layout.addWidget(email_label, 1, 0)
+        grid_layout.addWidget(self.email_input, 1, 1)
 
-    def retranslateUi(self, Form):
-        _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-                                                    "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-                                                    "p, li { white-space: pre-wrap; }\n"
-                                                    "</style></head><body style=\" font-family:\'.SF NS Text\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-                                                    "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">Login Page</span></p></body></html>"))
-        self.l_username.setText(_translate("Form", "Username"))
-        self.l_password.setText(_translate("Form", "Password"))
-        self.btn_submit.setText(_translate("Form", "Submit"))
-        self.btn_newuser.setText(_translate("Form", "New User"))
+        # Mot de passe
+        password_label = QLabel("Mot de passe:")
+        self.password_input = QLineEdit()
+        self.password_input.setEchoMode(QLineEdit.Password)
+        grid_layout.addWidget(password_label, 2, 0)
+        grid_layout.addWidget(self.password_input, 2, 1)
 
+        # Bouton Connexion
+        login_button = QPushButton("Se connecter")
+        login_button.clicked.connect(self.login)
+        grid_layout.addWidget(login_button, 3, 0, 1, 2)
 
+        # Bouton S'inscrire
+        signup_button = QPushButton("S'inscrire si vous n'avez pas de compte")
+        signup_button.clicked.connect(self.go_to_signup_page)
+        grid_layout.addWidget(signup_button, 4, 0, 1, 2)
 
-    def pop_window(self,text):
+        # Bouton Mot de passe oublié
+        forgot_password_button = QPushButton("Mot de passe oublié")
+        forgot_password_button.clicked.connect(self.forgot_password)
+        grid_layout.addWidget(forgot_password_button, 5, 0, 1, 2)
 
-        msg = QtWidgets.QMessageBox()
+        layout.addLayout(grid_layout)
+        self.setLayout(layout)
 
-        msg.setIcon(QtWidgets.QMessageBox.Critical)
-        msg.setText("{}".format(text))
-        msg.setInformativeText('{}'.format(text))
-        msg.setWindowTitle("{}".format(text))
-
-        msg.exec_()
-
-
-    def btn_newuser_handler(self):
-        self.openwindow()
-
-
-    def btn_login_handler(self):
-
-        if len(self.txt_password.text()) <= 1:
-            self.pop_window('Enter Valid Data !')
-
+    def login(self):
+        email = self.email_input.text()
+        password = self.password_input.text()
+        
+        # Vérifier les informations d'identification dans la base de données
+        if self.check_credentials(email, password):
+            # Redirection vers la page espaceAdmin
+            self.redirect_to_admin_page()
         else:
-            username = self.txt_username.text()
-            password = self.txt_password.text()
+            QMessageBox.warning(self, "Erreur de Connexion", "Email ou mot de passe incorrect")
 
-            conn = sqlite3.connect('user.db')
-            cursor = conn.cursor()
+    def check_credentials(self, email, password):
+        # Connexion à la base de données
+        conn = mysql.connector.connect(
+            host="localhost",
+            user="marie",
+            password="passer",
+            database="sgbd"  # Assurez-vous d'avoir la bonne base de données
+        )
+        cursor = conn.cursor()
 
-            cursor.execute("SELECT username,password FROM credentials")
-            val = cursor.fetchall()
+        # Exécutez la requête pour vérifier les informations d'identification
+        query = "SELECT * FROM Administrateur WHERE email = %s AND motDePasse = %s"
+        cursor.execute(query, (email, password))
+        result = cursor.fetchone()
 
-            if len(val) >= 1:
+        # Fermez la connexion à la base de données
+        cursor.close()
+        conn.close()
 
-             for x in val:
-                if username in x[0] and password in x[1]:
-                    print("welcome ")
-                else:
-                    pass
-            else:
-                print('No user Found')
+        return result is not None
 
+    def redirect_to_admin_page(self):
+        # Redirection vers la page espaceAdmin
+        self.admin_page = EspaceAdminPage()
+        self.admin_page.show()
+        self.close()
+
+    def forgot_password(self):
+        # Code pour rediriger vers la page de réinitialisation du mot de passe
+        pass
+
+    def go_to_signup_page(self):
+        # Ouvrir la page d'inscription
+        self.signup_page = InscriptionPage()
+        self.signup_page.show()
+        self.close()
+
+    def insert_user_to_database(self, nom, prenom, email, mot_de_passe, role):
+        # Connexion à la base de données MySQL
+        conn = mysql.connector.connect(
+            host="localhost",
+            user="marie",
+            password="passer",
+            database="sgbd"
+        )
+
+        cursor = conn.cursor()
+
+        # Insertion des données dans la table Administrateur
+        sql = "INSERT INTO Administrateur (nom, prenom, email, motDePasse, role) VALUES (%s, %s, %s, %s, %s)"
+        val = (nom, prenom, email, mot_de_passe, role)
+        cursor.execute(sql, val)
+
+        # Validation de la transaction et fermeture de la connexion
+        conn.commit()
+        conn.close()
 
 if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-
-    Form = QtWidgets.QWidget()
-
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
+    app = QApplication(sys.argv)
+    window = AdminLoginPage()
+    window.show()
     sys.exit(app.exec_())
