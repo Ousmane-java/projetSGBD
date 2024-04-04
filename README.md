@@ -20,3 +20,38 @@ Ensuite, exécutez la commande suivante :
 
 Naviguez enfin entre les pages du site.
 
+## Utilisation
+=======
+
+                                 --------------------
+# La structure du backOffice 'pyqtProject'
+
+pyqtProject/
+│
+├── ui/                  # Dossier pour les fichiers de conception d'interface utilisateur (fichiers .ui)
+│   ├── mainwindow.ui    # Interface principale de l'application
+│   ├── document.ui      # Interface pour la génération de documents administratifs
+│   └── ...
+│
+├── src/                 # Dossier pour les fichiers source Python
+│   ├── main.py          # Point d'entrée de l'application
+│   ├── document.py      # Module pour la génération de documents administratifs
+│   ├── qrcode.py        # Module pour la génération de QR codes
+│   ├── seConnecter.py   # Module pour la connexion à la base de données MySQL
+│   ├── inscription.py   # Module pour gérer l'inscription des utilisateurs
+│   └── espaceAdmin.py   # Module pour l'espace d'administration
+│
+├── database/            # Dossier pour les fichiers de configuration de base de données
+│   ├── mysql_config.py  # Fichier de configuration pour la connexion à MySQL
+│   └── ...
+│
+├── assets/              # Dossier pour les ressources supplémentaires comme image
+│   ├── logo.png         # Logo de l'entreprise
+│   └── ...
+│
+└── README.md            # Documentation du projet
+
+
+
+>>>>>>> main
+
