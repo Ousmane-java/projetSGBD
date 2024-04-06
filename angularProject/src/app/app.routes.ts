@@ -9,6 +9,12 @@ import { HeaderComponent } from './header/header.component';
 import { EnseignementComponent } from './etudiant/enseignement/enseignement.component';
 import { FeedbackComponent } from './etudiant/feedback/feedback.component';
 import { AccueilComponent } from './etudiant/accueil/accueil.component';
+import { RegisterPageComponent } from './register-page/register-page.component';
+import path from 'path';
+import { DashboardEnseignantComponent } from './enseignant/dashboard-enseignant/dashboard-enseignant.component';
+import { AccueilEnseignantComponent } from './enseignant/accueil-enseignant/accueil-enseignant.component';
+import { EnseignementEnseignantComponent } from './enseignant/enseignement-enseignant/enseignement-enseignant.component';
+import { EtudiantEnseignantComponent } from './enseignant/etudiant-enseignant/etudiant-enseignant.component';
 
 export const routes: Routes = [
 
@@ -24,6 +30,7 @@ export const routes: Routes = [
             { path: 'home', component: HomeComponent},
             { path: 'infos', component: AboutComponent},
             { path: 'login', component: LoginPageComponent},
+            { path: 'register', component: RegisterPageComponent},
         ]
     },
 
@@ -34,6 +41,15 @@ export const routes: Routes = [
         { path: 'feedback',  component: FeedbackComponent},
             
     ]},
+
+    { 
+        path: 'enseignant', component: DashboardEnseignantComponent , children: [
+            {path: 'accueil-enseignant', component: AccueilEnseignantComponent,},
+            {path: 'enseignement-enseignant', component:EnseignementEnseignantComponent,},
+            {path: 'etudiant-enseignant', component: EtudiantEnseignantComponent,}
+        ]
+    }
+
 
     
 

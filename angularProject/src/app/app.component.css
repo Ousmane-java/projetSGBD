@@ -1,0 +1,22 @@
+
+.navbar {
+    background-color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.navbar-brand {
+    font-weight: 1000;
+    color: var(--primary);
+}
+
+.btn {
+    padding: 10px 18px;
+    border-width: 0px;
+    border-radius: 0;
+    background-color: var(--primary);
+}
