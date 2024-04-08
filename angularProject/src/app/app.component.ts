@@ -10,5 +10,5 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angularProject';
+  title = 'Effectivité Enseignement';
 }

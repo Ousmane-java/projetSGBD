@@ -2,7 +2,7 @@
 
 ## Description
 
-Le projet vise à numériser les procédures de gestion pédagogique de l'ESP (Établissement Scolaire et Pédagogique) en mettant en place une plateforme web et desktop spécifiquement dédiée à la gestion de l'effectivité des enseignements.
+Le projet vise à numériser les procédures de gestion pédagogique de l'ESP (École Supérieure Polytechnique) en mettant en place une plateforme web et desktop spécifiquement dédiée à la gestion de l'effectivité des enseignements.
 
 ### 1. Interface FrontOFFICE en Angular
 Développement d'une interface utilisateur en utilisant le framework Angular. Cette interface est destinée aux étudiants et aux enseignants.
@@ -54,3 +54,12 @@ pyqtProject/
 
 ```
 
+
+## Equipe projet
+
+|Nom       |Prenom         | Mail                                                |
+-----------|---------------|-----------------------------------------------------|
+|BA        |Aminata        |[aminataba@esp.sn](mailto:aminataba@esp.sn)          |
+|DIOUM     |Mariama        |[mariamadioum@esp.sn](mailto:mariamadioum@esp.sn)    |
+|DRAME     |Ousmane        |[ousmanedrame@esp.sn](mailto:ousmanedrame@esp.sn)    |
+|SYLLA     | Dié           |[diesylla@esp.sn](mailto:diesylla@esp.sn)            |
