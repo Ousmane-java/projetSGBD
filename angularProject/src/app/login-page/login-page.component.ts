@@ -24,7 +24,15 @@ export class LoginPageComponent {
   onLogin() {
     this.http.post('http://127.0.0.1:8000/api/auth/login', this.loginObj).subscribe((res:any)=>{
       if(res.status) {
-        this.router.navigateByUrl('/dashboard/accueil')
+        if (this.loginObj.role == 'etudiant') {
+          
+          this.router.navigateByUrl('/dashboard/accueil')
+        }
+        else(
+
+          this.router.navigate(['enseignant/accueil-enseignant'])
+        )
+
       } else {
         alert(res.statusText)
         alert('Connexion echouée')
@@ -37,9 +45,11 @@ export class LoginPageComponent {
 export class Login { 
     email: string;
     password: string;
+    role: string;
     constructor() {
       this.email = '';
       this.password = '';
+      this.role = '';
     } 
 }
 // export class LoginPageComponent {
