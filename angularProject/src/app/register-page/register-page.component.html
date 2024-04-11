@@ -1,38 +1,45 @@
 <section class="login  mt-3 pt-3">
-    <div class="formulaire col-lg-4 md-6 m-auto shadow-lg">
-        <div class="text-center mb-5">
-             <h3>Inscription</h3>
-        </div>
-    <form>
-        <div class="mb-3">
-          <label class="form-label">Nom</label>
-          <input type="text" class="form-control" aria-describedby="emailHelp" name="nom" [(ngModel)]="registerObj.nom">
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Prenom</label>
-          <input type="text" class="form-control" aria-describedby="emailHelp" name="prenom" [(ngModel)]="registerObj.prenom">
-        </div>
-        <div class="mb-3">
-          <label class="form-label">E-mail</label>
-          <input type="email" class="form-control" aria-describedby="emailHelp" name="email" [(ngModel)]="registerObj.email">
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Mot de passe</label>
-          <input type="password" class="form-control" name="password" [(ngModel)]="registerObj.password">
-        </div>
-        <div class="row">
-        <div class="mb-5 col form-check">
-          <input type="checkbox" class="form-check-input">
-          <label class="form-check-label" for="exampleCheck1">Rester connecté</label>
-          
-        </div>
-        <div class="col">
-        <label class="form-check-label">Déjà enregistré ? <a routerLink="/login">Se connecter</a></label>
+  <div class="formulaire col-lg-4 md-6 m-auto shadow-lg">
+      <div class="text-center mb-5">
+           <h3>Inscription</h3>
+      </div>
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Role</label>
+      <select class="form-control" name="role" id="" [(ngModel)]="registerObj.role">
+        <option value="etudiant">Etudiant</option>
+        <option value="enseignant">Enseignant</option>
+      </select>
     </div>
+      <div class="mb-3">
+        <label class="form-label">Nom</label>
+        <input type="text" class="form-control" aria-describedby="emailHelp" name="nom" [(ngModel)]="registerObj.nom">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Prenom</label>
+        <input type="text" class="form-control" aria-describedby="emailHelp" name="prenom" [(ngModel)]="registerObj.prenom">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">E-mail</label>
+        <input type="email" class="form-control" aria-describedby="emailHelp" name="email" [(ngModel)]="registerObj.email">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Mot de passe</label>
+        <input type="password" class="form-control" name="password" [(ngModel)]="registerObj.password">
+      </div>
+      <div class="row">
+      <div class="mb-5 col form-check">
+        <input type="checkbox" class="form-check-input">
+        <label class="form-check-label" for="exampleCheck1">Rester connecté</label>
+        
+      </div>
+      <div class="col">
+      <label class="form-check-label">Déjà enregistré ? <a routerLink="/login">Se connecter</a></label>
+  </div>
 </div>
-        <div class="d-grid gap-2 col-6 mx-auto">
-            <button type="submit" class="btn btn-primary " (click)="onRegister()">S'inscrire</button>
-          </div>
-      </form>
-    </div>
+      <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="submit" class="btn btn-primary " (click)="onRegister()">S'inscrire</button>
+        </div>
+    </form>
+  </div>
 </section>

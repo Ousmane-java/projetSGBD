@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\Auth\AuthController;
+use App\Http\Controllers\Api\SyllabusController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
@@ -28,4 +29,6 @@ Route::get('users', function(){
 
 Route::post('auth/register', [AuthController::class, 'register']);
 Route::post('auth/login', [AuthController::class, 'login']);
+Route::get('syllabus', [SyllabusController::class, 'index']);
+Route::post('createSyllabus', [SyllabusController::class, 'store']);
 Route::post('auth/logout', [AuthController::class, 'logout']);

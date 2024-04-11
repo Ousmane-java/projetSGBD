@@ -19,36 +19,32 @@
                   <form>
                     <div class="mb-3">
                       <label class="col-form-label">Date</label>
-                      <input type="date" class="form-control" id="recipient-name">
+                      <input type="date" class="form-control" name="date" [(ngModel)]="cahier.date">
                     </div>
                     <div class="mb-3">
                       <label class="col-form-label">Heure</label>
-                      <input type="time" class="form-control" id="recipient-name">
+                      <input type="time" name="heure" class="form-control" [(ngModel)]="cahier.heure">
                     </div>
 
                     <div class="mb-3">
                       <label class="col-form-label">Professeur</label>
-                      <select name="" id="" class="form-control">
-                        <option value=""></option>
-                      </select>
+                      <input name="professeur" class="form-control" [(ngModel)]="cahier.professeur">
                     </div>
 
                     <div class="mb-3">
                       <label class="col-form-label">Cours</label>
-                      <select name="" id="" class="form-control">
-                        <option value=""></option>
-                      </select>
-                    </div>
+                      <input type="text" name="cours"  class="form-control" [(ngModel)]="cahier.cours">
+                      </div>
 
                     <div class="mb-3">
                       <label class="col-form-label">Contenu</label>
-                      <textarea class="form-control" id="message-text"></textarea>
+                      <textarea class="form-control" name="contenu" [(ngModel)]="cahier.contenu"></textarea>
                     </div>
                   </form>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-dark">Enregistrer</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fermer</button>
+                  <button type="button" class="btn btn-dark" (click)="onCahier()">Enregistrer</button>
                 </div>
               </div>
             </div>
@@ -68,30 +64,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">20-10-2010</th>
-          <td>10:00</td>
-          <td>Saliou SENE</td>
-          <td>Anglais</td>
-          <td>Contenu</td>
+        <tr *ngFor="let item of Cahier">
+          <th scope="row">{{item.date}}</th>
+          <td>{{item.time}}</td>
+          <td>{{item.professeur}}</td>
+          <td>{{item.cours}}</td>
+          <td>{{item.contenu}}</td>
           <td>Actions</td>
         </tr>
-        <tr>
-          <th scope="row">20-10-2010</th>
-          <td>10:00</td>
-          <td>Saliou SENE</td>
-          <td>Anglais</td>
-          <td>Contenu</td>
-          <td>Actions</td>
-        </tr>
-        <tr>
-          <th scope="row">20-10-2010</th>
-          <td>10:00</td>
-          <td>Saliou SENE</td>
-          <td>Anglais</td>
-          <td>Contenu</td>
-          <td>Actions</td>
-        </tr>
+        
       </tbody>
     </table>
   </div>
