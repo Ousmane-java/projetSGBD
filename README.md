@@ -12,13 +12,34 @@ Développement d'une interface BackOFFICE en utilisant le framework Python QT. C
 
 ## Pré-requis
 
-Assurez-vous d'avoir Node.js installé sur votre machine. Ensuite, installez Angular CLI (Command Line Interface) en utilisant la commande suivante dans votre terminal :
+### Angular frontend
+
+Assurez-vous d'avoir Node.js installé sur votre machine. Placez-vous dans le repertoire :
+`cd angularProject`
+
+Ensuite, installez Angular CLI (Command Line Interface) en utilisant la commande suivante dans votre terminal :
 `npm install -g @angular/cli`
 
 Ensuite, exécutez la commande suivante :
 `ng serve`
 
 Naviguez enfin entre les pages du site.
+`http://localhost:4200/`
+
+### Laravel backend
+
+Placez-vous dans le repertoire :
+
+`cd laravel-api`
+Creer votre propre base de donnée
+`cp .env .env.example`
+
+Ensuite, exécutez la commande suivante :
+`composer install`
+
+`php artisan migrate --seed`
+
+`php artisan serve`
 
 ## Utilisation
 
