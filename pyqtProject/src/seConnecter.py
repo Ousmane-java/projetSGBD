@@ -6,6 +6,25 @@ import mysql.connector
 from inscription import InscriptionPage
 from espaceAdmin import EspaceAdminPage
 
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel
+
+class ConnectWindow(QWidget):
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowTitle("Se Connecter")
+        self.setGeometry(200, 200, 400, 300)
+
+        layout = QVBoxLayout()
+
+        connect_label = QLabel("<center>Page de connexion</center>")
+        connect_label.setStyleSheet("font-size: 20px;")
+        layout.addWidget(connect_label)
+
+        # Ajoutez ici d'autres éléments de la page de connexion
+
+        self.setLayout(layout)
+
 
 class AdminLoginPage(QWidget):
     def __init__(self):

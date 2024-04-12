@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout, QGridLayout
 from PyQt5.QtCore import Qt
 import mysql.connector
-from espaceAdmin import EspaceAdminPage
+from dashboard.main import MainWindow  # Import du module MainWindow de dashboard.main
 
 class InscriptionPage(QWidget):
     def __init__(self):
@@ -79,7 +79,7 @@ class InscriptionPage(QWidget):
 
     def redirect_to_admin_page(self):
         # Redirection vers la page espaceAdmin
-        self.admin_page = EspaceAdminPage()
+        self.admin_page = MainWindow()  # Créer une instance de MainWindow
         self.admin_page.show()
         self.close()
 

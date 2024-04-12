@@ -2,21 +2,17 @@ import sys
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QVBoxLayout
 from PyQt5.QtGui import QPixmap
-
 class WelcomeWindow(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Bienvenue")
-        self.setGeometry(100, 100, 600, 400)
-
         layout = QVBoxLayout()
 
-        welcome_label = QLabel("<center>Bienvenue</center>")
+        welcome_label = QLabel("<center><h1>Bienvenue sur eduPortal</h1></center>")
         welcome_label.setStyleSheet("font-size: 30px;")
         layout.addWidget(welcome_label)
 
-        welcome_desc_label = QLabel("<center>envoyez vos colis en toute sécurité, où que vous soyez</center>")
+        welcome_desc_label = QLabel("<center><h2>Découvrez une expérience d'apprentissage innovante et simplifiée avec notre application,<br> où chaque interaction façonne votre succès académique.<h2></center>")
         layout.addWidget(welcome_desc_label)
 
         connexion_button = QPushButton("Connexion")
@@ -31,15 +27,17 @@ class WelcomeWindow(QWidget):
         layout.addWidget(image_label)
 
         layout.setSpacing(20)
-
-        # Réduire les marges autour du bouton
         layout.setContentsMargins(100, 50, 100, 50)
 
         self.setLayout(layout)
 
     def open_connect_page(self):
-        # Mettez ici le code pour afficher la page "seConnecter"
-        print("Ouvrir la page de connexion")
+        # Importez ConnectWindow depuis seConnecter.py pour éviter les erreurs d'importation circulaire
+        from seConnecter import ConnectWindow
+        
+        # Créez une instance de ConnectWindow et affichez-la
+        self.connect_window = ConnectWindow()
+        self.connect_window.show()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
