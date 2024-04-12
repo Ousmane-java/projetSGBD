@@ -36,7 +36,7 @@ Naviguez enfin entre les pages du site.
 
 Placez-vous dans le repertoire :
 
-`cd aircraftdb`
+`cd laravel-api`
 Creer votre propre base de donnée dans le repertoire .env file.
 `cp .env .env.example`
 
@@ -46,6 +46,19 @@ Ensuite, exécutez la commande suivante :
 `php artisan migrate`
 
 `php artisan serve`
+
+### Python Interface
+
+Assurez-vous d'avoir au préalable python3 installé sur votre machine. Ensuite, placez-vous dans le répertoire :
+
+`cd pyqtProject/src`
+
+Lancez `main.py` : 
+`python main.py`
+
+Ou les fichiers de connexion ou d'inscription directement :
+`python inscription.py`
+`python seConnecter.py` 
 
 ## La structure du backOffice 'pyqtProject'
 
@@ -90,8 +103,6 @@ pyqtProject/
 
 
 ## Technologies utilisées
-
-![techStack](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/technologies.png)
 
 ### 1. Front Office :
   - Angular
@@ -141,18 +152,18 @@ pyqtProject/
 
 8. Page d'accueil back-office
 
-![accback](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/accueilback.png)
+![accback](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/Capture%20d%E2%80%99%C3%A9cran%202024-04-12%20%C3%A0%2000.53.42.png)
 
 9. Tableau de bord back-office
 
-![dashback](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/dashboardback.png)
+![dashback](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/Capture%20d%E2%80%99%C3%A9cran%202024-04-11%20%C3%A0%2019.23.45.png)
 
 10. Page de connexion back-office
 
-![logback](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/snapshots/IMG_0062.PNG)
+![logback](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/IMG_0062.PNG)
 
 11. Page d'inscription back-office
 
-![insback](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/snapshots/IMG_0062.PNG)
+![insback](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/IMG_0063.PNG)
 
 
