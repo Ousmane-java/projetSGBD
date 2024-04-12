@@ -115,3 +115,44 @@ pyqtProject/
 
 2. Login page
 
+![loginpg](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/page-connexion.png)
+
+3. Page accueil responsable classe
+
+![acc](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/page-cahier-texte.png)
+
+4. Page enseignement etudiant
+
+![ensetu](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/syllabus-dispo-etu.png)
+
+5. Page feedback etudiant
+
+![feedetu](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/avis-etudiant.png)
+
+6. Page ajout syllabus enseignant
+
+![syllens](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/ajout-syllabus.png)
+
+7. Page ajout note enseignant
+
+![noteens](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/notes-etudiants.png)
+
+### Back-Office
+
+8. Page d'accueil back-office
+
+![accback](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/accueilback.png)
+
+9. Tableau de bord back-office
+
+![dashback](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/dashboardback.png)
+
+10. Page de connexion back-office
+
+![logback](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/snapshots/IMG_0062.PNG)
+
+11. Page d'inscription back-office
+
+![insback](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/snapshots/IMG_0062.PNG)
+
+
