@@ -1,8 +1,14 @@
 # Gestion de l'effectivité des enseignements
 
+Projet de SGBD (sytème de gestion de base de données) réalisé en groupe à l'ESP
 ## Description
 
 Le projet vise à numériser les procédures de gestion pédagogique de l'ESP (École Supérieure Polytechnique) en mettant en place une plateforme web et desktop spécifiquement dédiée à la gestion de l'effectivité des enseignements.
+
+  #### Présentation PowerPoint: [click here](https://docs.google.com/presentation/d/1wpXHRbTdrj8j-Nax4serAhtAG2Ml-qTSQWAy5bLAW0I/edit?usp=sharing)  <br>
+
+  #### Rapport de projet : [click here](https://docs.google.com/document/d/1Jihqa3khZIEIaghmiaQ51xmGEDJH79BnCffpxaUO3u0/edit?usp=sharing)
+
 
 ### 1. Interface FrontOFFICE en Angular
 Développement d'une interface utilisateur en utilisant le framework Angular. Cette interface est destinée aux étudiants et aux enseignants.
@@ -30,19 +36,16 @@ Naviguez enfin entre les pages du site.
 
 Placez-vous dans le repertoire :
 
-`cd laravel-api`
-Creer votre propre base de donnée
+`cd aircraftdb`
+Creer votre propre base de donnée dans le repertoire .env file.
 `cp .env .env.example`
 
 Ensuite, exécutez la commande suivante :
 `composer install`
 
-`php artisan migrate --seed`
+`php artisan migrate`
 
 `php artisan serve`
-
-## Utilisation
-
 
 ## La structure du backOffice 'pyqtProject'
 
@@ -84,3 +87,31 @@ pyqtProject/
 |DIOUM     |Mariama        |[mariamadioum@esp.sn](mailto:mariamadioum@esp.sn)    |
 |DRAME     |Ousmane        |[ousmanedrame@esp.sn](mailto:ousmanedrame@esp.sn)    |
 |SYLLA     | Dié           |[diesylla@esp.sn](mailto:diesylla@esp.sn)            |
+
+
+## Technologies utilisées
+
+![techStack](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/technologies.png)
+
+### 1. Front Office :
+  - Angular
+  - Laravel
+  - HTML
+  - CSS
+  - TypeScript
+  - JavaScript
+  
+### 2. Back Office :
+  - Python & PythonQt
+  
+### 3. Database:
+  - MySQL
+
+## Snapshots
+
+1. Accueil
+
+![homepg](https://github.com/Ousmane-java/projetSGBD/blob/main/snapshots/accueil.png)
+
+2. Login page
+
